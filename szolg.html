@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Badics Balázs">
+    <meta name="description" content="Szolgáltatás igénybevétele, Csoda Szállítók oldala.">
+    <title>Igénybevétel</title>
+    <link rel="stylesheet" href="BB.css">
+    <link rel="icon" href="Pictures/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <header class="orangeb big">
+        <h1>Csoda Szállítók Kft.</h1>
+        <nav class="menu">
+            <a id="current" href="#">
+                <h2>Szolgáltatás igénybevétel</h2>
+            </a>
+            <a href="Main.html">
+                <h2>Főoldal</h2>
+            </a>
+            <a href="urlap.html">
+                <h2>Értékeljen minket</h2>
+            </a>
+        </nav>
+        <blockquote>
+            <p>"A logisztika az a művészet, amely hidat épít az üzleti álmok és a valóság között."</p>
+            <cite>– Csoda Szállítók Kft. csapata</cite>
+        </blockquote>
+    </header>
+    <!-- Válasszon szolgáltatást -->
+    <div class="tartalom2">
+        <div class="szolgbig">
+            <header class="cimek">
+                Válasszon szolgáltatást
+            </header>
+            <div class="szöveg1 szolgflex">
+                <div class="szöveg2 mylabel">
+                    <label id="raktar">
+                        <input type="button" class="picbutton" value="Raktárlogisztika"
+                            onclick="szovegkiiras('raktar'), ugras()">
+                        <img class="bemutatokep" src="Pictures/pexels-elevate-1267324.jpg"
+                            alt="Egy targonca, ahogy anyagot szállít">
+                    </label>
+                </div>
+                <div class="szöveg2 mylabel">
+                    <label id="szall">
+                        <input type="button" class="picbutton" value="Szállítmányozás" onclick="szovegkiiras('szall'), ugras()">
+                        <img class="bemutatokep" src="Pictures/kamion.jpg" alt="Egy targonca, ahogy anyagot szállít">
+                    </label>
+                </div>
+                <div class="szöveg2 mylabel">
+                    <label id="szak">
+                        <input type="button" class="picbutton" value="Szaktanácsadás" onclick="szovegkiiras('szak'), ugras()">
+                        <img class="bemutatokep" src="Pictures/tanacs.jpg" alt="Egy targonca, ahogy anyagot szállít">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Szaktanácsos rész -->
+        <div class="szolgbig">
+            <header class="cimek" id="valszolg">
+                Még nem választott szolgáltatást
+            </header>
+            <div id="szaktanacs" class="szöveg1 szolgflex">
+                <div class="main">
+                    <table class="tablazat">
+                        <tr>
+                            <td>
+                                <h3 class="cimek2">Szaktanácsadás lehetőségek</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <form id="szakurlap" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php"
+                                    method="post">
+
+                                    <p>
+                                        <label for="nev">Név<br></label>
+                                        <input class="mezo" type="text" name="nev" placeholder="pl: Kiss András"
+                                            id="nev1">
+                                    </p>
+
+                                    <p>
+                                        <label for="tel"><br>Telefonszáma<br></label>
+                                        <input class="mezo" type="tel" name="tel" maxlength=12
+                                            placeholder="+36 11 111 1111" id="tel1">
+                                    </p>
+
+                                    <p><label for="email"><br>E-mail cím<br></label>
+                                        <input class="mezo" type="email" name="email" id="email1">
+                                    </p>
+
+                                    <p>
+                                        <label for="hossz"><br>Milyen hosszú távon kívánja igénybe venni a
+                                            szolgáltatást?<br>(Hetekben számolva)<br></label>
+                                        <input class="mezo" type="number" name="hossz" id="hossz"
+                                            placeholder="Hetek száma" min="2" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <label for="vizsgalat">Szeretnék kérni teljes raktár átvizsgálást</label>
+                                        <input type="checkbox" name="vizsgalat" id="vizsgalat" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <label for="kihelyezett">Szeretnék kérni egy folytonosan kihelyezett Csoda
+                                            Szállítók tanácsadó kollégát</label>
+                                        <input type="checkbox" name="kihelyezett" id="kihelyezett" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <label for="emberek"><br>Mennyi raktári dolgozót kíván képezni?<br>(A képzésben
+                                            résztvevők alkalmasak lesznek bonyolultabb raktári folyamatok feletti
+                                            irányítás elvégzésére és menedzselésére)<br></label>
+                                        <input class="mezo" type="number" id="emberek" name="emberek"
+                                            placeholder="Dolgozók száma" min="1" max="10" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <input type="submit" value="Igénybevétel" class="urlapbutton">
+                                        <input type="reset" value="Visszaállítás" class="urlapbutton"
+                                            onclick="szamolo()">
+                                    </p>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <aside>
+                    <div class="szöveg2">
+                        <header class="cimek2">
+                            Szolgáltatlás árazása
+                        </header>
+                        <div class="szamolo">
+                            <p>Alapszolgáltatás:<br><span id="alap"></span></p>
+                            <p>Raktár vizsgálat (egyszeri):<br><span id="tvizsgalat"></span></p>
+                            <p>Kihelyezett kolléga:<br><span id="kihelyezettk"></span></p>
+                            <p>Képzés:<br><span id="kepzes"></span></p>
+                            <p>Végösszeg:<br><span id="vegosszeg"></span></p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <!-- Raktáros rész -->
+            <div id="raktarlog" class="szöveg1 szolgflex">
+                <div class="main">
+                    <table class="tablazat">
+                        <tr>
+                            <td>
+                                <h3 class="cimek2">Raktárlogisztika lehetőségek</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <form id="rakurlap" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php"
+                                    method="post">
+
+                                    <p>
+                                        <label for="nev">Név<br></label>
+                                        <input class="mezo" type="text" name="nev2" placeholder="pl: Kiss András"
+                                            id="nev">
+                                    </p>
+
+                                    <p>
+                                        <label for="tel"><br>Telefonszáma<br></label>
+                                        <input class="mezo" type="tel" name="tel" maxlength=12
+                                            placeholder="+36 11 111 1111" id="tel2">
+                                    </p>
+
+                                    <p>
+                                        <label for="email"><br>E-mail cím<br></label>
+                                        <input class="mezo" type="email" name="email" id="email2">
+                                    </p>
+                                    <p>
+                                        <label for="hossz2"><br>Milyen hosszú távon kívánja igénybe venni a
+                                            szolgáltatást?<br>(Hetekben számolva)<br></label>
+                                        <input class="mezo" type="number" name="hossz2" id="hossz2"
+                                            placeholder="Hetek száma" min="2" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <label for="elelmiszer">Élelmiszert kíván raktározni?</label>
+                                        <input type="checkbox" name="elelmiszer" id="elelmiszer" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <label for="hutott">Hűtött árút kíván raktározni?</label>
+                                        <input type="checkbox" name="hutott" id="hutott" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <label for="aru"><br>Mennyi árút kíván nálunk tárolni?<br>(Kérjük tonnában adja
+                                            meg)<br></label>
+                                        <input class="mezo" type="number" id="aru" name="aru"
+                                            placeholder="Súly tonnában" min="1" max="50" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <input type="submit" value="Igénybevétel" class="urlapbutton">
+                                        <input type="reset" value="Visszaállítás" class="urlapbutton">
+                                    </p>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <aside>
+                    <div class="szöveg2">
+                        <header class="cimek2">
+                            Szolgáltatlás árazása
+                        </header>
+                        <div class="szamolo">
+                            <p>Alapszolgáltatás:<br><span id="alap2"></span></p>
+                            <p>Élelmiszer:<br><span id="elelmiszerr"></span></p>
+                            <p>Hűtött árú:<br><span id="hutottr"></span></p>
+                            <p>Árú súlya:<br><span id="suly"></span></p>
+                            <p>Végösszeg:<br><span id="vegosszeg2"></span></p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <!-- Szállítmányozásos rész -->
+            <div id="szallitmany" class="szöveg1 szolgflex">
+                <div class="main">
+                    <table class="tablazat">
+                        <tr>
+                            <td>
+                                <h3 class="cimek2">Szállítmányozási lehetőségek</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <form id="szalllap" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php"
+                                    method="post">
+
+                                    <p><label for="nev">Név<br></label>
+                                        <input class="mezo" type="text" name="nev" placeholder="pl: Kiss András"
+                                            id="nev3">
+                                    </p>
+
+                                    <p><label for="tel"><br>Telefonszáma<br></label>
+                                        <input class="mezo" type="tel" name="tel" maxlength=12
+                                            placeholder="+36 11 111 1111" id="tel3">
+                                    </p>
+
+                                    <p><label for="email"><br>E-mail cím<br></label>
+                                        <input class="mezo" type="email" name="email" id="email3">
+                                    </p>
+                                    <p>
+                                        <label for="hossz3"><br>Milyen távolságra kell szállítani az
+                                            árút?<br>(Kilóméterben megadva)<br></label>
+                                        <input class="mezo" type="number" name="hossz3" id="hossz3"
+                                            placeholder="Út hossza (km)" min="1" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <label for="nemzetkozi">Nemzetközileg kíván szállítani?</label>
+                                        <input type="checkbox" name="nemzetkozi" id="nemzetkozi" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <label for="hutott2">Hűtött árút kíván szállítani?</label>
+                                        <input type="checkbox" name="hutott2" id="hutott2" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <label for="aru2"><br>Mennyi árút kíván szállítani?<br>(Kérjük tonnában adja
+                                            meg)<br></label>
+                                        <input class="mezo" type="number" id="aru2" name="aru2"
+                                            placeholder="Súly tonnában" min="1" max="10" oninput="szamolo()">
+                                    </p>
+
+                                    <p>
+                                        <input type="submit" value="Igénybevétel" class="urlapbutton">
+                                        <input type="reset" value="Visszaállítás" class="urlapbutton">
+                                    </p>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <aside>
+                    <div class="szöveg2">
+                        <header class="cimek2">
+                            Szolgáltatlás árazása
+                        </header>
+                        <div class="szamolo">
+                            <p>Alapszolgáltatás:<br><span id="alap3"></span></p>
+                            <p>Nemzetközi:<br><span id="nemzetkozisz"></span></p>
+                            <p>Hűtött árú:<br><span id="hutottr2"></span></p>
+                            <p>Árú súlya:<br><span id="suly2"></span></p>
+                            <p>Végösszeg:<br><span id="vegosszeg3"></span></p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="orangeb lab">
+        <div>
+            <h2>Kapcsolat</h2>
+            <p>Szeretne többet megtudni szolgáltatásainkról? Vegye fel velünk a kapcsolatot az alábbi elérhetőségeken!
+            </p>
+            <ul>
+                <li><strong>Email:</strong> <a href="#">info@csodaszallitok.hu</a></li>
+                <li><strong>Telefon:</strong> +36 20 123 4567</li>
+                <li><strong>Cím:</strong> 2360 Gyál, Logisztika utca 13.</li>
+            </ul>
+            <p>Nyitva tartás: hétfőtől péntekig, 8:00–17:00</p>
+        </div>
+        <div>
+            <h2>Navigáció</h2>
+            <p><a href="Main.html">Főoldal</a></p>
+            <p><a href="szolg.html">Szolgáltatás igénybevétel</a></p>
+            <p><a href="urlap.html">Értékeljen minket</a></p>
+            <p><a href="raktárlogisztika.html#raktarozas">Raktárlogisztika</a></p>
+            <p><a href="raktárlogisztika.html#szallitmanyozas">Szállítmányozás</a></p>
+            <p><a href="raktárlogisztika.html#szaktanacsadas">Szaktanácsadás</a></p>
+        </div>
+    </footer>
+
+    <script src="CSSZ.js"></script>
+</body>
+
+</html>

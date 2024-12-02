@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Badics Balázs">
+    <meta name="description" content="Kiértékelés, Csoda Szállítók oldala.">
+    <title>Értékelés</title>
+    <link rel="stylesheet" href="BB.css">
+    <link rel="icon" href="Pictures/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+</head>
+
+<body>
+
+    <header class="orangeb big">
+        <h1>Csoda Szállítók Kft.</h1>
+        <nav class="menu">
+            <a href="szolg.html">
+                <h2>Szolgáltatás igénybevétel</h2>
+            </a>
+            <a href="Main.html">
+                <h2>Főoldal</h2>
+            </a>
+            <a href="#" id="current">
+                <h2>Értékeljen minket</h2>
+            </a>
+        </nav>
+        <blockquote>
+            <p>"A logisztika az a művészet, amely hidat épít az üzleti álmok és a valóság között."</p>
+            <cite>– Csoda Szállítók Kft. csapata</cite>
+        </blockquote>
+    </header>
+
+    <div class="tartalom">
+        <aside>
+            <header class="cimek">Miért érdemes véleményt írni?</header>
+            <div class="szöveg1">
+                <p>
+                    A vélemények megosztása nemcsak nekünk, hanem Önnek és más ügyfeleinknek is értékes lehet. Íme
+                    néhány
+                    ok, hogy miért fontos számunkra az Ön visszajelzése:
+                </p>
+                <ul>
+                    <li>Segít a fejlődésben:
+                        Az Ön véleménye irányt mutat számunkra, hogy még jobban megfeleljünk az ügyféligényeknek. Akár
+                        pozitív, akár építő jellegű kritikát fogalmaz meg, minden visszajelzés lehetőséget teremt arra,
+                        hogy szolgáltatásainkat még magasabb színvonalon nyújtsuk.</li>
+
+                    <li>Mások számára is hasznos:
+                        A tapasztalatainak megosztása segíthet más ügyfeleknek, hogy tájékozott döntést hozzanak. Ha
+                        elégedett szolgáltatásainkkal, ossza meg, miért érdemes minket választani!</li>
+
+                    <li>Bizalmat épít:
+                        Az Ön őszinte véleménye hozzájárul ahhoz, hogy cégünk átlátható és megbízható maradjon. Az új
+                        ügyfelek számára fontos látni, hogy valódi emberek valós tapasztalatokat osztanak meg rólunk.
+                    </li>
+
+                    <li>Elismerés a csapatunk számára:
+                        Pozitív visszajelzései megerősítik csapatunk tagjait abban, hogy elhivatottságuk és kemény
+                        munkájuk valóban számít. Egy köszönő szó vagy dicséret nagyban hozzájárul munkatársaink
+                        motivációjához.</li>
+
+                    <li>Hosszú távú együttműködést alapoz meg:
+                        A vélemények alapján jobban megértjük partnereink igényeit, és személyre szabott megoldásokat
+                        dolgozhatunk ki. Ez az együttműködés mindkét fél számára előnyös.</li>
+                </ul>
+                <p>
+                    Hogyan oszthatja meg véleményét?
+                </p>
+                <p>
+                    Kérjük, hogy írjon nekünk e-mailben, töltse ki online kérdőívünket, vagy hagyjon visszajelzést
+                    közösségi
+                    média oldalainkon! Véleménye mindig számít, hiszen közösen érhetjük el a legjobb eredményeket.
+
+                    "Az Ön visszajelzése a mi fejlődésünk kulcsa!"
+                </p>
+            </div>
+        </aside>
+
+        <div class="main">
+            <table class="tablazat">
+                <tr>
+                    <td>
+                        <h3 class="cimek2">Mondja el véleményét szabadon.</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form id="myform" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post"
+                            novalidate>
+
+                            <p>
+                                <label for="nev">Név</label><br>
+                                <input class="mezo" type="text" name="nev" placeholder="pl: Kiss András" id="nev">
+                            </p>
+
+                            <p>
+                                <label for="tel">Telefonszáma</label><br>
+                                <input class="mezo" type="tel" name="tel" maxlength=12 placeholder="+36 11 111 1111"
+                                    id="tel">
+                            </p>
+
+                            <p>
+                                <label for="email">E-mail cím</label><br>
+                                <input class="mezo" type="email" name="email" id="email">
+                            </p>
+
+                            <p>Melyik szolgáltatásunkat vette igénybe?<br>
+                                <label for="szolg1">Raktárlogisztika</label>
+                                <input type="radio" name="szolg" value="raktarszolg" id="szolg1">
+                                <br><label for="szolg2">Szállítmányozás</label>
+                                <input type="radio" name="szolg" value="szallitmany" id="szolg2">
+                                <br><label for="szolg3">Szaktanácsadás</label>
+                                <input type="radio" name="szolg" value="szaktan" id="szolg3">
+                            </p>
+
+                            <p>
+                                <label for="velemeny">Fejtse ki milyen volt velünk dolgozni</label><br>
+                                <textarea class="mezo" name="velemeny" id="velemeny"></textarea>
+                            </p>
+
+                            <p>
+                                <label for="skala">Egy 10-es skálán értékelje a kapott szolgáltatás minőségét<br>(1 -
+                                    Nagyon
+                                    rossz, 10 - Nagyon jó)<br>Jelenlegi érték: <strong><span
+                                            id="skalaertek">5</span></strong></label><br>
+                                <input class="mezo" type="range" name="skala" id="skala" min="1" max="10" value="5"
+                                    oninput="skalazas()">
+                            </p>
+
+                            <p>
+                                Az alábbi módokon tudja fenntartani a kapcsolatot velünk:
+                            </p>
+                            <p>
+                                <label for="hirlevel">Szeretnék értesítést kapni a szolgáltatások
+                                    kedvezményeiről</label>
+                                <input type="checkbox" name="hirlevel" id="hirlevel" checked="checked"><br>
+                                <label for="uj">Szeretnék értesülni a legújabb eseményekről és
+                                    szolgáltatásokról</label>
+                                <input type="checkbox" name="uj" id="uj" checked="checked">
+                            </p>
+                            <p>
+                                <input type="submit" value="Kérdőív beküldése" class="urlapbutton">
+                                <input type="reset" value="Visszaállítás" class="urlapbutton">
+                            </p>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+            <header class="cimek">További elérési útjaink</header>
+            <div class="szoveg2 szöveg1">
+                <p>A következő módokon tudja felvenni velünk a kapcsolatot:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="#">info@csodaszallitok.hu</a></li>
+                    <li><strong>Telefon:</strong> +36 20 123 4567</li>
+                    <li>Látogasson el irodánkba az alábbi cím alatt:<strong>Cím:</strong> 2360 Gyál, Logisztika utca
+                        13.</li>
+                </ul>
+                <p>Értékeljük, ha az előbb említett útak valamelyikén kapcsolatba lép velünk.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="orangeb lab">
+        <div>
+            <h2>Kapcsolat</h2>
+            <p>Szeretne többet megtudni szolgáltatásainkról? Vegye fel velünk a kapcsolatot az alábbi elérhetőségeken!
+            </p>
+            <ul>
+                <li><strong>Email:</strong> <a href="#">info@csodaszallitok.hu</a></li>
+                <li><strong>Telefon:</strong> +36 20 123 4567</li>
+                <li><strong>Cím:</strong> 2360 Gyál, Logisztika utca 13.</li>
+            </ul>
+            <p>Nyitva tartás: hétfőtől péntekig, 8:00–17:00</p>
+        </div>
+        <div>
+            <h2>Navigáció</h2>
+            <p><a href="Main.html">Főoldal</a></p>
+            <p><a href="szolg.html">Szolgáltatás igénybevétel</a></p>
+            <p><a href="urlap.html">Értékeljen minket</a></p>
+            <p><a href="raktárlogisztika.html#raktarozas">Raktárlogisztika</a></p>
+            <p><a href="raktárlogisztika.html#szallitmanyozas">Szállítmányozás</a></p>
+            <p><a href="raktárlogisztika.html#szaktanacsadas">Szaktanácsadás</a></p>
+        </div>
+    </footer>
+
+
+    <script src="CSSZ.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                rules: {
+                    nev: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    tel: {
+                        required: true,
+                        tel: true
+                    },
+                    szolg: {
+                        required: true
+                    },
+                    velemeny: {
+                        required: true,
+                        minlength: 50
+                    },
+                },
+                messages: {
+                    nev: "<br>Kérjük adja meg teljes nevét!",
+                    tel: "<br>Kérjük adja meg telefonszámát a fenti formában!",
+                    email: "<br>Kérjük valós email címet adjon meg!",
+                    velemeny: {
+                        required: "<br>Kérjük írjon egy kifejtett véleményt!",
+                        minlength: "<br>Kérjük hosszabban fejtse ki véleményét!"
+                    },
+                    szolg: "Kérjük válassza ki az igénybevett szolgáltatást!"
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
