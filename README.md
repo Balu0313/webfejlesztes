@@ -1,7 +1,7 @@
 # webfejlesztes
 Oldal készítő neve: Badics Balázs
 
-URL:
+URL: https://balu0313.github.io/webfejlesztes/
 
 Leírás: A weboldalam egy kitalált logisztikai vállalat oldalának felel meg. Röviden bemutatja a vállalatot, szolgáltatásait.
 
