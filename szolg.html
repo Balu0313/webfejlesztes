@@ -11,7 +11,9 @@
     <link rel="icon" href="Pictures/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <style>
     </style>
 </head>
@@ -53,13 +55,15 @@
                 </div>
                 <div class="szöveg2 mylabel">
                     <label id="szall">
-                        <input type="button" class="picbutton" value="Szállítmányozás" onclick="szovegkiiras('szall'), ugras()">
+                        <input type="button" class="picbutton" value="Szállítmányozás"
+                            onclick="szovegkiiras('szall'), ugras()">
                         <img class="bemutatokep" src="Pictures/kamion.jpg" alt="Egy targonca, ahogy anyagot szállít">
                     </label>
                 </div>
                 <div class="szöveg2 mylabel">
                     <label id="szak">
-                        <input type="button" class="picbutton" value="Szaktanácsadás" onclick="szovegkiiras('szak'), ugras()">
+                        <input type="button" class="picbutton" value="Szaktanácsadás"
+                            onclick="szovegkiiras('szak'), ugras()">
                         <img class="bemutatokep" src="Pictures/tanacs.jpg" alt="Egy targonca, ahogy anyagot szállít">
                     </label>
                 </div>
@@ -84,45 +88,57 @@
                                     method="post">
 
                                     <p>
-                                        <label for="nev">Név<br></label>
-                                        <input class="mezo" type="text" name="nev" placeholder="pl: Kiss András"
-                                            id="nev1">
+                                        <label>Név<br>
+                                            <input class="mezo" type="text" name="nev" placeholder="pl: Kiss András"
+                                                id="nev1" required="required">
+                                        </label>
                                     </p>
 
                                     <p>
-                                        <label for="tel"><br>Telefonszáma<br></label>
-                                        <input class="mezo" type="tel" name="tel" maxlength=12
-                                            placeholder="+36 11 111 1111" id="tel1">
+                                        <label>
+                                            <br>Telefonszáma<br>
+                                            <input class="mezo" type="tel" name="tel" maxlength=12
+                                                placeholder="+36 11 111 1111" id="tel1" required="required">
+                                        </label>
                                     </p>
 
-                                    <p><label for="email"><br>E-mail cím<br></label>
-                                        <input class="mezo" type="email" name="email" id="email1">
-                                    </p>
-
-                                    <p>
-                                        <label for="hossz"><br>Milyen hosszú távon kívánja igénybe venni a
-                                            szolgáltatást?<br>(Hetekben számolva)<br></label>
-                                        <input class="mezo" type="number" name="hossz" id="hossz"
-                                            placeholder="Hetek száma" min="2" oninput="szamolo()">
-                                    </p>
-
-                                    <p>
-                                        <label for="vizsgalat">Szeretnék kérni teljes raktár átvizsgálást</label>
-                                        <input type="checkbox" name="vizsgalat" id="vizsgalat" oninput="szamolo()">
+                                    <p><label>
+                                            <br>E-mail cím<br>
+                                            <input class="mezo" type="email" name="email" id="email1"
+                                                required="required">
+                                        </label>
                                     </p>
 
                                     <p>
-                                        <label for="kihelyezett">Szeretnék kérni egy folytonosan kihelyezett Csoda
-                                            Szállítók tanácsadó kollégát</label>
-                                        <input type="checkbox" name="kihelyezett" id="kihelyezett" oninput="szamolo()">
+                                        <label>
+                                            <br>Milyen hosszú távon kívánja igénybe venni a
+                                            szolgáltatást?<br>(Hetekben számolva)<br>
+                                            <input class="mezo" type="number" name="hossz" id="hossz"
+                                                placeholder="Hetek száma" min="2" oninput="szamolo()">
+                                        </label>
                                     </p>
 
                                     <p>
-                                        <label for="emberek"><br>Mennyi raktári dolgozót kíván képezni?<br>(A képzésben
+                                        <label>Szeretnék kérni teljes raktár átvizsgálást
+                                            <input type="checkbox" name="vizsgalat" id="vizsgalat" oninput="szamolo()">
+                                        </label>
+                                    </p>
+
+                                    <p>
+                                        <label>Szeretnék kérni egy folytonosan kihelyezett Csoda
+                                            Szállítók tanácsadó kollégát
+                                            <input type="checkbox" name="kihelyezett" id="kihelyezett"
+                                                oninput="szamolo()">
+                                        </label>
+                                    </p>
+
+                                    <p>
+                                        <label><br>Mennyi raktári dolgozót kíván képezni?<br>(A képzésben
                                             résztvevők alkalmasak lesznek bonyolultabb raktári folyamatok feletti
-                                            irányítás elvégzésére és menedzselésére)<br></label>
-                                        <input class="mezo" type="number" id="emberek" name="emberek"
-                                            placeholder="Dolgozók száma" min="1" max="10" oninput="szamolo()">
+                                            irányítás elvégzésére és menedzselésére)<br>
+                                            <input class="mezo" type="number" id="emberek" name="emberek"
+                                                placeholder="Dolgozók száma" min="1" max="10" oninput="szamolo()">
+                                        </label>
                                     </p>
 
                                     <p>
@@ -165,43 +181,50 @@
                                     method="post">
 
                                     <p>
-                                        <label for="nev">Név<br></label>
-                                        <input class="mezo" type="text" name="nev2" placeholder="pl: Kiss András"
-                                            id="nev">
+                                        <label>Név<br>
+                                            <input class="mezo" type="text" name="nev2" placeholder="pl: Kiss András"
+                                                id="nev" required="required"></label>
                                     </p>
 
                                     <p>
-                                        <label for="tel"><br>Telefonszáma<br></label>
-                                        <input class="mezo" type="tel" name="tel" maxlength=12
-                                            placeholder="+36 11 111 1111" id="tel2">
+                                        <label><br>Telefonszáma<br>
+                                            <input class="mezo" type="tel" name="tel" maxlength=12
+                                                placeholder="+36 11 111 1111" id="tel2" required="required"></label>
                                     </p>
 
                                     <p>
-                                        <label for="email"><br>E-mail cím<br></label>
-                                        <input class="mezo" type="email" name="email" id="email2">
+                                        <label><br>E-mail cím<br>
+                                            <input class="mezo" type="email" name="email" id="email2"
+                                                required="required">
+                                        </label>
                                     </p>
                                     <p>
-                                        <label for="hossz2"><br>Milyen hosszú távon kívánja igénybe venni a
-                                            szolgáltatást?<br>(Hetekben számolva)<br></label>
-                                        <input class="mezo" type="number" name="hossz2" id="hossz2"
-                                            placeholder="Hetek száma" min="2" oninput="szamolo()">
-                                    </p>
-
-                                    <p>
-                                        <label for="elelmiszer">Élelmiszert kíván raktározni?</label>
-                                        <input type="checkbox" name="elelmiszer" id="elelmiszer" oninput="szamolo()">
+                                        <label><br>Milyen hosszú távon kívánja igénybe venni a
+                                            szolgáltatást?<br>(Hetekben számolva)<br>
+                                            <input class="mezo" type="number" name="hossz2" id="hossz2"
+                                                placeholder="Hetek száma" min="2" oninput="szamolo()">
+                                        </label>
                                     </p>
 
                                     <p>
-                                        <label for="hutott">Hűtött árút kíván raktározni?</label>
-                                        <input type="checkbox" name="hutott" id="hutott" oninput="szamolo()">
+                                        <label>Élelmiszert kíván raktározni?
+                                            <input type="checkbox" name="elelmiszer" id="elelmiszer"
+                                                oninput="szamolo()">
+                                        </label>
                                     </p>
 
                                     <p>
-                                        <label for="aru"><br>Mennyi árút kíván nálunk tárolni?<br>(Kérjük tonnában adja
-                                            meg)<br></label>
-                                        <input class="mezo" type="number" id="aru" name="aru"
-                                            placeholder="Súly tonnában" min="1" max="50" oninput="szamolo()">
+                                        <label>Hűtött árút kíván raktározni?
+                                            <input type="checkbox" name="hutott" id="hutott" oninput="szamolo()">
+                                        </label>
+                                    </p>
+
+                                    <p>
+                                        <label><br>Mennyi árút kíván nálunk tárolni?<br>(Kérjük tonnában adja
+                                            meg)<br>
+                                            <input class="mezo" type="number" id="aru" name="aru"
+                                                placeholder="Súly tonnában" min="1" max="50" oninput="szamolo()">
+                                        </label>
                                     </p>
 
                                     <p>
@@ -242,41 +265,45 @@
                                 <form id="szalllap" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php"
                                     method="post">
 
-                                    <p><label for="nev">Név<br></label>
-                                        <input class="mezo" type="text" name="nev" placeholder="pl: Kiss András"
-                                            id="nev3">
+                                    <p><label>Név<br>
+                                            <input class="mezo" type="text" name="nev" placeholder="pl: Kiss András"
+                                                id="nev3" required="required"></label>
                                     </p>
 
-                                    <p><label for="tel"><br>Telefonszáma<br></label>
-                                        <input class="mezo" type="tel" name="tel" maxlength=12
-                                            placeholder="+36 11 111 1111" id="tel3">
+                                    <p><label><br>Telefonszáma<br>
+                                            <input class="mezo" type="tel" name="tel" maxlength=12
+                                                placeholder="+36 11 111 1111" id="tel3" required="required"></label>
                                     </p>
 
-                                    <p><label for="email"><br>E-mail cím<br></label>
-                                        <input class="mezo" type="email" name="email" id="email3">
+                                    <p><label><br>E-mail cím<br>
+                                            <input class="mezo" type="email" name="email" id="email3"
+                                                required="required"></label>
                                     </p>
                                     <p>
-                                        <label for="hossz3"><br>Milyen távolságra kell szállítani az
-                                            árút?<br>(Kilóméterben megadva)<br></label>
-                                        <input class="mezo" type="number" name="hossz3" id="hossz3"
-                                            placeholder="Út hossza (km)" min="1" oninput="szamolo()">
-                                    </p>
-
-                                    <p>
-                                        <label for="nemzetkozi">Nemzetközileg kíván szállítani?</label>
-                                        <input type="checkbox" name="nemzetkozi" id="nemzetkozi" oninput="szamolo()">
+                                        <label><br>Milyen távolságra kell szállítani az
+                                            árút?<br>(Kilóméterben megadva)<br>
+                                            <input class="mezo" type="number" name="hossz3" id="hossz3"
+                                                placeholder="Út hossza (km)" min="1" oninput="szamolo()"></label>
                                     </p>
 
                                     <p>
-                                        <label for="hutott2">Hűtött árút kíván szállítani?</label>
-                                        <input type="checkbox" name="hutott2" id="hutott2" oninput="szamolo()">
+                                        <label>Nemzetközileg kíván szállítani?
+                                            <input type="checkbox" name="nemzetkozi" id="nemzetkozi"
+                                                oninput="szamolo()"></label>
                                     </p>
 
                                     <p>
-                                        <label for="aru2"><br>Mennyi árút kíván szállítani?<br>(Kérjük tonnában adja
-                                            meg)<br></label>
-                                        <input class="mezo" type="number" id="aru2" name="aru2"
-                                            placeholder="Súly tonnában" min="1" max="10" oninput="szamolo()">
+                                        <label>Hűtött árút kíván szállítani?
+                                            <input type="checkbox" name="hutott2" id="hutott2"
+                                                oninput="szamolo()"></label>
+                                    </p>
+
+                                    <p>
+                                        <label><br>Mennyi árút kíván szállítani?<br>(Kérjük tonnában adja
+                                            meg)<br>
+                                            <input class="mezo" type="number" id="aru2" name="aru2"
+                                                placeholder="Súly tonnában" min="1" max="10"
+                                                oninput="szamolo()"></label>
                                     </p>
 
                                     <p>
